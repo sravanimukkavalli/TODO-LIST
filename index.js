@@ -57,11 +57,6 @@ function onDeleteTodo(todoId) {
 }
 
 function appendAndDisplayTodoItems(todo) {
-     const {time}= todo;
-    // const Year = time.getFullYear();
-    // const Month = time.getMonth() + 1;
-    // const date = time.getDate();
-    // const dateFormat = ` ${Year}-${Month}-${date} `;
 
     let checkboxId = "myCheckbox" + todo.uniqueId;
     let labelId = "label" + todo.uniqueId;
@@ -106,12 +101,6 @@ function appendAndDisplayTodoItems(todo) {
         onDeleteTodo(todoId);
     };
     deleteIconContainer.appendChild(deleteIcon);
-
-    let para = document.createElement('p');
-    para.id = "timeEle";
-    para.textContent = `Created Date: ${time}`;
-    para.classList.add("ml-4", "bg-outline-info");
-    todoItem.appendChild(para);
 
 }
 
